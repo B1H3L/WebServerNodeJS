@@ -1,6 +1,5 @@
-const {envs} = require('./config/env')
-const {statServer} = require('./server/server')
-
+import { envs } from './config/env.js'
+import { statServer } from './server/server.js'
 const main = () => {
     statServer({
         port : envs.PORT,
@@ -8,9 +7,8 @@ const main = () => {
     }
     )
 }
-
 //funcion agnostica autoconvocada
-//agnostica porqque no tiene nombre
+//agnostica porque no tiene nombre
 (async()=>{
     main()
 })()
